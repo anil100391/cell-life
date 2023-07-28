@@ -90,8 +90,11 @@ void CAApp::OnLoop()
 // -----------------------------------------------------------------------------
 void CAApp::OnRender()
 {
-    SDL_SetRenderDrawColor(_renderer, 96, 128, 255, 255);
+    SDL_SetRenderDrawColor(_renderer, 0, 0, 0, 255);
     SDL_RenderClear(_renderer);
+
+    SDL_SetRenderDrawColor(_renderer, 255, 128, 0, 255);
+    SDL_RenderDrawLine(_renderer, 0, 0, SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2);
     SDL_RenderPresent(_renderer);
 }
 
